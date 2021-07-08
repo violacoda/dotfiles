@@ -11,6 +11,9 @@ nmap <leader>gk <plug>(signify-prev-hunk)
 nmap <leader>gJ 9999<leader>gJ
 nmap <leader>gK 9999<leader>gK
 
-highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
-highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
-highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+highlight SignifyLineAdd    cterm=bold ctermbg=NONE ctermfg=green
+highlight SignifyLineDelete cterm=bold ctermbg=NONE ctermfg=red
+highlight SignifyLineChange cterm=bold ctermbg=NONE ctermfg=yellow
+highlight SignifySignAdd    cterm=bold ctermbg=NONE ctermfg=green
+highlight SignifySignDelete cterm=bold ctermbg=NONE ctermfg=red
+highlight SignifySignChange cterm=bold ctermbg=NONE ctermfg=yellow

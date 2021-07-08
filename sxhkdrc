@@ -102,6 +102,10 @@ super + {Left,Down,Up,Right}
 super + alt + f
 	firefox
 
+# qutebrowser
+super + alt + b
+	qutebrowser
+
 # dmenu
 super + @space
 	dmenu_run

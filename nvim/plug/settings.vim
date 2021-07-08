@@ -26,8 +26,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       Plug 'rhysd/vim-grammarous'                           " spell checking
       Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' } " Sphinx integration
       Plug 'gu-fan/riv.vim'                                 " rST integration
+      Plug 'lervag/vimtex'                                  " LaTeX integration
+      Plug 'vim-syntastic/syntastic'                        " Syntax checking hacks for vim
+      Plug 'Shougo/neosnippet.vim'                          " Snippets support
+      Plug 'Shougo/neosnippet-snippets'                     " Snippets
+      Plug 'neomake/neomake'                                " Asynchronous linting
 
-      Plug 'morhetz/gruvbox'                                " Gruvbox colorscheme
+      Plug 'morhetz/gruvbox'                                " gruvbox colorscheme
+      Plug 'cocopon/iceberg.vim'                            " iceberg colorscheme
       Plug 'Mizux/vim-colorschemes'                         " blade_runner colorscheme
       Plug 'abnt713/vim-hashpunk'                           " hashpunk colorscheme
 call plug#end()

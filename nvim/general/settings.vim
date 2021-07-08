@@ -40,6 +40,8 @@ set history=1000			" Increase the undo limit
 set visualbell			" Blink cursor on error instead of beeping
 set shortmess+=c              " Dont pass messages to ins completion-menu
 set mouse=r
+set exrc
+set secure
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
