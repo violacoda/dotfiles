@@ -14,18 +14,15 @@ bspc monitor eDP -d I II III IV V VI VII VIII IX X
 #      xrandr --output eDP --primary --mode 2160x1440 --rotate normal --output HDMI-A-0 --mode 1680x1050 --rotate normal --right-of eDP
 #fi
 
-bspc config border_width         4
+bspc config border_width         2
 bspc config window_gap           2
 
 bspc config normal_border_color  "#383C36"
-bspc config focused_border_color "#800080"
+bspc config focused_border_color "#696969"
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-#feh --bg-scale $HOME/grafiki/background/wallpaper.jpg
-feh --bg-scale $HOME/grafiki/background/ok.jpg
-$HOME/.config/polybar/launch.sh --hack
-#$HOME/.config/polybar/material/scripts/pywal.sh $HOME/grafiki/background/wallpaper.jpg
-
+feh --bg-fill $HOME/grafiki/background/tenshi-no-tamago.jpg
+$HOME/.config/polybar/launch.sh --forest
