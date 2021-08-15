@@ -16,6 +16,7 @@ opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
 opt.hlsearch = false
 opt.cursorline = false
+opt.showmode = false
 
 -- Incremental live completion
 opt.inccommand = 'nosplit'

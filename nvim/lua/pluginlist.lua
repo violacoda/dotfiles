@@ -60,7 +60,7 @@ function()
     use "onsails/lspkind-nvim"
     use "ray-x/lsp_signature.nvim"
 
-    use "lewis6991/gitsigns.nvim"
+    use "airblade/vim-gitgutter"
     use "tpope/vim-fugitive"
     use "tpope/vim-rhubarb"
     use "junegunn/gv.vim"

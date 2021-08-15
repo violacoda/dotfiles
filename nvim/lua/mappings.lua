@@ -28,8 +28,17 @@ map("", "<Up>", 'v:count ? "k" : "gk"', {expr = true})
 -- Copy whole file content
 map("n", "<C-a>", ":%y+<CR>", opt)
 
--- Toggle numbers
---map("n", "<leader>n", ":set nu!<CR>", opt)
+-- Resize windows: alt + hjkl
+map("n", "<M-j>", ":resize -1<CR>", opt)
+map("n", "<M-k>", ":resize +1<CR>", opt)
+map("n", "<M-h>", ":vertical resize -1<CR>", opt)
+map("n", "<M-l>", ":vertical resize +1<CR>", opt)
+
+-- Window navigation: ctrl + hjkl
+map("n", "<C-h>", "<C-w>h", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<C-l>", "<C-w>l", opt)
 
 -- Open a new buffer as a Terminal
 -- Get out of terminal with jk
