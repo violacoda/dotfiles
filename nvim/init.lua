@@ -19,6 +19,7 @@ require('plugins.luasnip')
 require('plugins.statusline')
 require('plugins.neoscroll')
 require('plugins.nvimtree')
+require('plugins.presence')
 
 require('plugins.toggleterm')
 require('plugins.treesitter')
