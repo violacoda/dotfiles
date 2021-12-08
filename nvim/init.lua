@@ -6,7 +6,6 @@ require('plugins.autopairs')
 require('plugins.blankline')
 require('plugins.bufferline')
 
-require('plugins.colorizer')
 require('plugins.comment')
 require('plugins.compe')
 require('plugins.dashboard')

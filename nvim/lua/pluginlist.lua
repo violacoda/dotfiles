@@ -50,7 +50,6 @@ function()
         setup = function() require "mappings".truezen() end 
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use "norcalli/nvim-colorizer.lua"
     use "karb94/neoscroll.nvim"
     use "folke/which-key.nvim" 
 
@@ -67,6 +66,7 @@ function()
 
     use "beyondmarc/glsl.vim"
     use "lervag/vimtex"
+    use "andweeb/presence.nvim"
 
     use "sainnhe/everforest"
     use "sainnhe/gruvbox-material"

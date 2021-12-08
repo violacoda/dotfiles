@@ -2,6 +2,7 @@
 
 sxhkd &
 picom &
+mpd &
 
 xsetroot -cursor_name left_ptr &
 setxkbmap pl &
@@ -24,5 +25,5 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+$HOME/.config/polybar/forest/launch.sh
 feh --bg-fill $HOME/grafiki/background/tenshi-no-tamago.jpg
-$HOME/.config/polybar/launch.sh --forest
