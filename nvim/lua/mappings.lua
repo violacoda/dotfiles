@@ -63,6 +63,7 @@ M.truezen = function()
 end
 
 map("n", "<C-s>", ":w <CR>", opt)
+
 M.nvimtree = function()
     map("n", "<C-n>", ":NvimTreeToggle<CR>", opt)
 end

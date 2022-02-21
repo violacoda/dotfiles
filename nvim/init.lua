@@ -7,6 +7,7 @@ require('plugins.blankline')
 require('plugins.bufferline')
 
 require('plugins.comment')
+require('plugins.todo-comments')
 require('plugins.compe')
 require('plugins.dashboard')
 

@@ -39,6 +39,11 @@ function()
             { "nvim-telescope/telescope-media-files.nvim" }   
 	    }
     }
+    use { 
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function() require "plugins.todo-comments" end 
+    }
     use "glepnir/dashboard-nvim"
     use "akinsho/nvim-toggleterm.lua"
     use "andymass/vim-matchup"

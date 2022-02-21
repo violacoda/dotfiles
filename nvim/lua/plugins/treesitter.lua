@@ -1,4 +1,4 @@
-local present, ts_config = pcall(require, "nvim-treesitter.configs")
+local present, ts_config = pcall(require, "nvim-treesitter.config")
 if not present then
     return
 end
