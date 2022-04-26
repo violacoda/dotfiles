@@ -44,17 +44,17 @@ map("n", "<C-l>", "<C-w>l", opt)
 -- Get out of terminal with jk
 map("t", "jk", "<C-\\><C-n>", opt)
 
-M.toggleterm = function()
-    -- Open terminals
-    map("n", "<leader>w", ":execute v:count . 'ToggleTerm direction=window' <CR>", opt)
-    map("n", "<leader>v", ":execute v:count . 'ToggleTerm direction=vertical' <CR>", opt)
-    map("n", "<leader>h", ":execute v:count . 'ToggleTerm direction=horizontal' <CR>", opt)
-
-    -- 'Un' toggle a term from within terminal edit mode
-    map("t", "<leader>w", "<C-\\><C-n> :ToggleTerm <CR>", opt)
-    map("t", "<leader>v", "<C-\\><C-n> :ToggleTerm <CR>", opt)
-    map("t", "<leader>h", "<C-\\><C-n> :ToggleTerm <CR>", opt)
-end
+--M.toggleterm = function()
+--    -- Open terminals
+--    map("n", "<leader>w", ":execute v:count . 'ToggleTerm direction=window' <CR>", opt)
+--    map("n", "<leader>v", ":execute v:count . 'ToggleTerm direction=vertical' <CR>", opt)
+--    map("n", "<leader>h", ":execute v:count . 'ToggleTerm direction=horizontal' <CR>", opt)
+--
+--    -- 'Un' toggle a term from within terminal edit mode
+--    map("t", "<leader>w", "<C-\\><C-n> :ToggleTerm <CR>", opt)
+--    map("t", "<leader>v", "<C-\\><C-n> :ToggleTerm <CR>", opt)
+--    map("t", "<leader>h", "<C-\\><C-n> :ToggleTerm <CR>", opt)
+--end
 
 M.truezen = function()
     map("n", "<leader>zz", ":TZAtaraxis<CR>", opt)
@@ -106,6 +106,47 @@ M.fugitive = function()
     map("n", "<leader>gh", ":diffget //2<CR>", opt)
     map("n", "<leader>gl", ":diffget //3<CR>", opt)
     map("n", "<leader>gb", ":Git blame<CR>", opt)
+end
+
+M.gitsigns = function()
+    on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
+
+        local function map(mode, l, r, opts)
+            opts = opts or {}
+            opts.buffer = bufnr
+            vim.keymap.set(mode, l, r, opts)
+        end
+
+        -- Navigation
+        map('n', ']c', function()
+            if vim.wo.diff then return ']c' end
+            vim.schedule(function() gs.next_hunk() end)
+            return '<Ignore>'
+        end, {expr=true})
+
+        map('n', '[c', function()
+            if vim.wo.diff then return '[c' end
+            vim.schedule(function() gs.prev_hunk() end)
+            return '<Ignore>'
+        end, {expr=true})
+
+        -- Actions
+        map({'n', 'v'}, '<leader>hs', ':Gitsigns stage_hunk<CR>')
+        map({'n', 'v'}, '<leader>hr', ':Gitsigns reset_hunk<CR>')
+        map('n', '<leader>hS', gs.stage_buffer)
+        map('n', '<leader>hu', gs.undo_stage_hunk)
+        map('n', '<leader>hR', gs.reset_buffer)
+        map('n', '<leader>hp', gs.preview_hunk)
+        map('n', '<leader>hb', function() gs.blame_line{full=true} end)
+        map('n', '<leader>tb', gs.toggle_current_line_blame)
+        map('n', '<leader>hd', gs.diffthis)
+        map('n', '<leader>hD', function() gs.diffthis('~') end)
+        map('n', '<leader>td', gs.toggle_deleted)
+
+        -- Text object
+        map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+    end
 end
 
 return M

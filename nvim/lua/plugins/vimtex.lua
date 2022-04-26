@@ -12,4 +12,4 @@ g.vimtex_compiler_latexmk = {
 
 g.tex_flavor = 'latex'
 g.vimtex_fold_manual = 1
-g.vimtex_latexmk_continuous = 1
+--g.vimtex_latexmk_continuous = 1
